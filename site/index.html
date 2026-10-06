@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gravity DH configurator film</title>
+<meta name="description" content="A 25-second explainer of the live 3D bike configurator, filmed from the real app.">
+<meta property="og:title" content="Gravity DH configurator film">
+<meta property="og:description" content="How the live 3D bike configurator works, in 25 seconds.">
+<meta property="og:image" content="poster.jpg">
+<link rel="icon" href="data:,">
+<style>
+  @font-face{font-family:"Inter";src:url("Inter-Variable.woff2") format("woff2");font-weight:100 900;font-display:swap}
+  :root{--bg:#0B0B0D;--surface:#121214;--ink:#EDEDEF;--muted:#9C9CA5;--border:#232328;--border-strong:#33333A;--live:#34D399}
+  @media (prefers-color-scheme:light){:root{--bg:#F5F5F6;--surface:#FFFFFF;--ink:#0B0B0D;--muted:#6B6B73;--border:#E6E6E9;--border-strong:#D2D2D7;--live:#16A34A}}
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--bg);color:var(--ink);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+  main{max-width:1120px;margin:0 auto;padding:48px 16px 64px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--muted);padding:3px 10px;border:1px solid var(--border-strong);border-radius:999px}
+  .eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--live)}
+  h1{font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.03em;font-weight:650;margin:16px 0 8px}
+  p.lead{color:var(--muted);font-size:18px;margin:0 0 28px;max-width:640px}
+  .player{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--border);background:#000;aspect-ratio:16/9}
+  video{display:block;width:100%;height:100%}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .links a{display:inline-flex;align-items:center;height:40px;padding:0 16px;border-radius:10px;border:1px solid var(--border-strong);background:var(--surface);
+    color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;transition:background-color 120ms cubic-bezier(.2,0,0,1)}
+  .links a.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  @media (hover:hover){.links a:not(.primary):hover{background:var(--border)}}
+  footer{margin-top:40px;color:var(--muted);font-size:14px}
+  footer a{color:inherit}
+</style>
+</head>
+<body>
+<main>
+  <span class="eyebrow"><i></i>25 seconds · filmed from the real app</span>
+  <h1>Gravity DH: the 3D bike configurator</h1>
+  <p class="lead">Start from a look, paint every part, click the bike to edit it, swap real parts, add your own text, and share the build.</p>
+  <div class="player">
+    <video src="bike-configurator-film.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
+  </div>
+  <div class="links">
+    <a class="primary" href="https://aowshad.github.io/bike-configurator-3d/">Open the live configurator</a>
+    <a href="https://github.com/aowshad/bike-configurator-film/releases/tag/v1.0">Download (with sound or silent)</a>
+    <a href="https://github.com/aowshad/bike-configurator-film">How it's made</a>
+  </div>
+  <footer>Rendered frame by frame from <a href="https://github.com/aowshad/bike-configurator-3d">bike-configurator-3d</a>; music and sound are generated in code.</footer>
+</main>
+</body>
+</html>

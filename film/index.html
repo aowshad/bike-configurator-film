@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bike configurator film</title>
+<link rel="preload" href="../assets/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="film.css">
+</head>
+<body>
+<!-- The real configurator (git submodule app/) fills the frame. The viewport layer only scales and translates it
+     ("screen recording" zooms); the overlay draws the cursor, captions and end card on top. -->
+<div id="frame">
+  <div id="viewport"><iframe id="app" src="../app/index.html?debug" width="1920" height="1080" title="Bike configurator"></iframe></div>
+  <div id="overlay" aria-hidden="true">
+    <div class="ripple" id="ripple"></div>
+    <div class="cursor" id="cursor">
+      <svg width="30" height="30" viewBox="0 0 30 30"><path d="M6 3.5v20.2l5.1-4.6 3.4 7.6 3.3-1.5-3.3-7.4 6.9-.4z" fill="#0B0B0D" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="caption" id="caption"><span id="captionText"></span></div>
+    <div class="card" id="card">
+      <div class="cardIn">
+        <div class="cardName" id="cardName"></div>
+        <div class="cardTag" id="cardTag"></div>
+        <div class="cardUrl"><i></i><span id="cardUrl"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="module" src="film.js"></script>
+</body>
+</html>

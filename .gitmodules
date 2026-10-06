@@ -1,0 +1,3 @@
+[submodule "app"]
+	path = app
+	url = https://github.com/aowshad/bike-configurator-3d

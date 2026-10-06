@@ -1,0 +1,23 @@
+{
+  "name": "bike-configurator-film",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A deterministic, frame-exact explainer film of the live 3D bike configurator.",
+  "scripts": {
+    "dev": "node render/server.mjs",
+    "audio": "node render/audio.mjs",
+    "render": "node render/render.mjs",
+    "render:draft": "node render/render.mjs --draft",
+    "stills": "node render/stills.mjs",
+    "review": "node render/review.mjs",
+    "check:determinism": "node render/check-determinism.mjs",
+    "probe": "node render/probe.mjs",
+    "publish": "node render/publish.mjs"
+  },
+  "devDependencies": {
+    "@ffprobe-installer/ffprobe": "^2.1.2",
+    "ffmpeg-static": "^5.2.0",
+    "playwright-core": "^1.48.0"
+  }
+}
